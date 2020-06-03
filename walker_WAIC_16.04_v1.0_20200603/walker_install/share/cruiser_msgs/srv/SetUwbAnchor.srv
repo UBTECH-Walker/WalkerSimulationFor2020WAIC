@@ -1,0 +1,5 @@
+# Set the uwb stations as a cruiser_msgs/UwbAnchors
+cruiser_msgs/UwbAnchor anchor
+---
+bool success
+

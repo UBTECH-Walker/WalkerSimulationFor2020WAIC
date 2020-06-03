@@ -1,0 +1,5 @@
+# ftId: "lwrist", "rwrist", "lankle", "rankle"
+string ftId
+int32  period_ms
+---
+string result

@@ -1,0 +1,4 @@
+# mode=0 uwb_loco_mode supported; mode=1 uwb_nav_mode supported
+int32 mode
+---
+bool supported

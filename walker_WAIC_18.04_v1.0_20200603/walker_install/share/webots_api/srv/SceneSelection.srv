@@ -1,0 +1,6 @@
+string scene_name
+bool nav
+bool vision
+---
+bool success
+

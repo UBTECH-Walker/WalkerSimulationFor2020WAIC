@@ -1,0 +1,40 @@
+<launch>
+
+  <param name="actionFilePath" value="/home/cruiser/ros_ws/install/share/ros_arm_motion/actionlist" />
+
+  <!--bringup cruiser-->
+  <!--node pkg="cruiser_controller" type="ros_cruiser_server.py" name="bringup_cruiser" output="screen"/-->
+  <node pkg="data_router" name="data_router_node" type="data_router_node" output="screen">
+           <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/chassis.yaml" command="load" />
+  </node>
+  <node pkg="chassis_device" name="chassis_device_node" type="chassis_device_node" output="screen">
+           <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/chassis.yaml" command="load" />
+  </node>
+  <node pkg="joint_device" name="joint_device_node" type="joint_device_node" output="screen">
+         <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/chassis.yaml" command="load" />
+  </node>
+
+  <node pkg="led_device" name="led_device_node" type="led_device_node" output="screen">
+           <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/led.yaml" command="load" />
+  </node>
+  <node pkg="power_device" name="power_device_node" type="power_device_node" output="screen">
+         <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/power.yaml" command="load" />
+</node>
+
+  <node pkg="navigation_behaviour" type="navigation_behaviour_node" name="navigation_behaviour_node" output="screen"/>
+  <node pkg="jointmotion_behaviour" type="jointmotion_behaviour_node" name="jointmotion_behaviour_node" output="screen"/>
+  <node pkg="led_behaviour" type="led_behaviour_node" name="led_behaviour_node" output="screen"/>
+  <node pkg="power_behaviour" type="power_behaviour_node" name="power_behaviour_node" output="screen"/>
+  <!--node pkg="ros_sdk_interface" type="ros_sdk_interface_node" name="ros_sdk_interface_node" output="screen"/-->
+  <node pkg="ros_arm_motion" type="armMotion_server_node" name="armMotion_server_node" output="screen"/>
+  <!--node pkg="ros_arm_navigation" type="ros_motion_proxy.py" name="ros_motion_proxy" output="screen"/-->
+</launch>

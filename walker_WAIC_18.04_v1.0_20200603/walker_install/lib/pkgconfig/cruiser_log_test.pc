@@ -1,0 +1,8 @@
+prefix=/home/chunyu/walker2_motion_output/install
+
+Name: cruiser_log_test
+Description: Description of cruiser_log_test
+Version: 1.10.13
+Cflags: 
+Libs: -L${prefix}/lib -lcruiser_log_test
+Requires: roscpp pluginlib

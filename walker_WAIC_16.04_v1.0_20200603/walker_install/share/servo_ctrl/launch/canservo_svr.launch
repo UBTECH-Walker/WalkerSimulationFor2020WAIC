@@ -1,0 +1,10 @@
+
+<launch>
+
+<node pkg="servo_ctrl" type="canservo_svr" name="canservo_svr" respawn="true" respawn_delay="1" output="screen">
+    <param name="arms_ft_ms" type="int" value="2"/>
+    <param name="legs_ft_ms" type="int" value="2"/>
+</node>
+
+</launch>
+

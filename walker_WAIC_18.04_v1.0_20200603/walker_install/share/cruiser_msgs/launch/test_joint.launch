@@ -1,0 +1,5 @@
+<launch>
+  <!--bringup cruiser-->
+  <node pkg="jointmotionTest" type="jointmotionTest" name="jointmotionTest" output="screen"/>
+  <node pkg="ros_arm_navigation" type="ros_motion_proxy.py" name="ros_motion_proxy" output="screen"/>
+</launch>

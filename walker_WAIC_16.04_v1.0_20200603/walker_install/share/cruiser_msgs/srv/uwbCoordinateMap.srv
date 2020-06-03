@@ -1,0 +1,10 @@
+float32 intput_x
+float32 intput_y
+float32 intput_theta
+bool theta_valid_flag
+---
+uint32 result
+float32 output_x
+float32 output_y
+float32 output_theta
+

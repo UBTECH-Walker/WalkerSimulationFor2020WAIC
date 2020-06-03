@@ -1,0 +1,34 @@
+ro.prod_cfg.info:
+    id: 1
+    product: cruzr1
+    launch: chassis_start_sl.launch
+    lidarmode: slamware
+    locate: amcl
+    
+ro.prod_cfg.func_enable: 
+    mode: 0
+    navigate: true
+    locomotion: true
+    dock: true
+    battery: true
+    arm: true
+    leg: false
+    chassis: true
+    
+ro.prod_cfg.sensor_enable:
+    lidar: true
+    rgbd: true
+    wallIr: true
+    groundIr: true
+    chargeIr: true
+    ultrasonic: true
+    eskin: true
+    odm: true
+    pyroelectricity: false
+    microwave: false   
+    
+ro.prod_cfg.parameters:
+    dock_mode: 1
+        #dock_mode:0-->Ir dock only;  1-->first Lidar,Ir align last;  2-->IR guide,then lidar detect, ir align last
+    lidar_type: 0
+        #lidar_type:0-->思岚雷达API雷达数据LIDAR_TYPE_SLAMWARE_API； 1-->思岚雷达USB驱动数据LIDAR_TYPE_SLAMWARE_DRIVER； 2-->EAI雷达USB驱动数据LIDAR_TYPE_EAI_DRIVER

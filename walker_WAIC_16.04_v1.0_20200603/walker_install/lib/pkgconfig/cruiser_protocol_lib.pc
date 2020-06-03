@@ -1,0 +1,8 @@
+prefix=/home/cjl/core_ws/walker_ws/walker2_motion_output/install
+
+Name: cruiser_protocol_lib
+Description: Description of cruiser_protocol_lib
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

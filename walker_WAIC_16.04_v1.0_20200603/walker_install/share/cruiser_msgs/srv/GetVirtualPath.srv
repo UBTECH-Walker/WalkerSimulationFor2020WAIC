@@ -1,0 +1,3 @@
+# Get the virtual path as a cruiser_msgs/VirtualPath
+---
+cruiser_msgs/VirtualPath path

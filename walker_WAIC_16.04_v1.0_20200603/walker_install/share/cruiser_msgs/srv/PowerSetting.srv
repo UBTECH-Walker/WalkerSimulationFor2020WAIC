@@ -1,0 +1,26 @@
+uint8 cmd
+uint16 year
+uint8 month
+uint8 day
+uint8 hour
+uint8 min
+uint8 sec
+bool timerEnable
+bool fullPowerOn
+uint8 flag
+
+---
+uint16 year
+uint8 month
+uint8 day
+uint8 hour
+uint8 min
+uint8 sec
+bool manual
+bool adapter
+bool station
+bool timer
+uint8 state
+
+bool success
+

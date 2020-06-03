@@ -1,0 +1,5 @@
+nav:
+    mode: 0
+    maxspeed: 0.5
+    retrycount: 10
+    retrydelay: 3

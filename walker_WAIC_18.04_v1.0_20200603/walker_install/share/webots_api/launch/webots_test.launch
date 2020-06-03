@@ -1,0 +1,7 @@
+<launch>
+<param name="/use_sim_time" value="true" />
+<node pkg="webots_api" type="webots_test_node" name="webots_test_node" respawn="false" respawn_delay="1" output="screen">
+
+</node>
+
+</launch>

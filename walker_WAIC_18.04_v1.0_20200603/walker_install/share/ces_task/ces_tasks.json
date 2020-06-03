@@ -1,0 +1,746 @@
+{
+	"taskname": "CES Task",
+
+  "tasklist": [
+    {
+      "groupname": "cesTask1",
+      "grouptype": "show|demo",
+      "subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "",
+          "resource": ""
+        },
+        {
+          "type": "ArmWalkTask",
+          "name": "walk/walkDynamic",
+          "enable": true,
+          "resource": "arm"
+        }
+      ]
+    },
+
+  	{
+  		"groupname": "cesTask2",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.startmusic --es data /mnt/internal_sd/Music/01_Startshow.mp3",
+          "resource": ""
+        },
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Center",
+  				"resource": "leg"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.endmusic",
+          "resource": ""
+        },
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 500,
+          "resource": ""
+        },
+  			{
+  				"type": "HmiTask",
+  				"name": "HmiTask",
+  				"emotion": "face_proud",
+  				"tts": "Hello everyone, my name is walker. Good to meet you all.",
+          "resource": ""
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/cesGreetings",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+
+  	{
+  		"groupname": "openDoor",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_smile",
+          "tts": "Let me open the door for you.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 2000,
+          "resource": ""
+        },
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Gate",
+  				"resource": "leg|vision"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubtechinc.cruzr.walker.control.smarthomeenter",
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_smile",
+          "tts": "Let me turn on the lights for you.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/ces100OpenDoor",
+  				"resource": "head|arm|leg|vision"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_happy",
+          "tts": "Welcome home, how's your day.",
+          "resource": ""
+        }
+  		]
+  	},
+
+
+  	{
+  		"groupname": "getBag",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2GetBag",
+  				"resource": "leg|vision"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "Let me handle the bag for you.",
+          "resource": ""
+        },
+  			{
+  				"type": "DelayTask",
+  				"name": "DelayTask",
+  				"delay": 1000,
+  				"resource": ""
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/cesPickBag",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+
+    {
+      "groupname": "hangBag",
+      "grouptype": "show|demo",
+      "subtask": [
+        {
+          "type": "ArmTask",
+          "name": "CES/ces101PlaceBag",
+          "resource": "head|arm|leg"
+        }
+      ]
+    },
+
+  	{
+  		"groupname": "goStandby",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Dance",
+  				"resource": "leg"
+  			}
+  		]
+  	},
+
+
+  	{
+  		"groupname": "doDance",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_proud",
+          "tts": "You may like this one.",
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.startmusic --es data /mnt/internal_sd/Music/02_Dance.mp3",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionDance",
+  				"resource": "head|arm|leg"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.endmusic",
+          "resource": ""
+        }
+  		]
+  	},
+
+
+  	{
+  		"groupname": "getWater",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "Let me get you a can of coke first.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2GetWater",
+  				"resource": "leg|vision"
+  			},
+  			{
+  				"type": "DelayTask",
+  				"name": "DelayTask",
+  				"delay": 1000,
+  				"resource": ""
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/ces102OpenRefrigerator",
+  				"resource": "head|arm|leg|vision"
+  			}
+  		]
+  	},
+
+
+  	{
+  		"groupname": "getFood",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "Let me get you something to eat.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Food",
+  				"resource": "leg|vision"
+  			},
+  			{
+  				"type": "DelayTask",
+  				"name": "DelayTask",
+  				"delay": 1000,
+  				"resource": ""
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/ces103PickChips",
+  				"resource": "head|arm|leg|vision"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "giveWater",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Sofa",
+  				"resource": "leg|vision"
+  			},
+  			{
+  				"type": "DelayTask",
+  				"name": "DelayTask",
+  				"delay": 1000,
+  				"resource": ""
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_naughty",
+          "tts": "Here they are.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/ces104PlaceWater",
+  				"resource": "head|arm|leg|vision"
+  			}
+  		]
+  	},
+
+
+  	{
+  		"groupname": "returnStandby",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2NoticeDate",
+  				"resource": "leg"
+  			},
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 2000,
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_naughty",
+          "tts": "You'll have a date with Mary at 8pm tonight.",
+          "resource": ""
+        },
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 2000,
+          "resource": ""
+        }
+  		]
+  	},
+
+
+  	{
+  		"groupname": "getUmbrella",
+  		"grouptype": "show|demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "It's gonna rain today, You'd better take an umbrella with you.",
+          "resource": ""
+        },
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 3000,
+          "resource": ""
+        },
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamic",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Umbrella",
+  				"resource": "leg|vision"
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/ces105PickUmbrella",
+  				"resource": "head|arm|leg|vision"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "giveUmbrella",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "NavTask",
+  				"name": "nav2GiveUmbrella",
+  				"resource": "leg"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_smile",
+          "tts": "Here it is.",
+          "resource": ""
+        },
+  			{
+  				"type": "DelayTask",
+  				"name": "DelayTask",
+  				"delay": 1000,
+  				"resource": ""
+  			},
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/cesDeliveryUmbrella",
+  				"resource": "head|arm|leg"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubtechinc.cruzr.walker.control.smarthomeleave",
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_smile",
+          "tts": "Let me turn off the lights for you.",
+          "resource": ""
+        }
+  		]
+  	},
+
+
+  	{
+  		"groupname": "cesTask3",
+  		"grouptype": "show|demo",
+  		"subtask": [
+  			{
+  				"type": "ArmWalkTask",
+  				"name": "walk/walkDynamicWithLeftHand",
+  				"enable": true,
+  				"resource": "arm"
+  			},
+  			{
+  				"type": "NavTask",
+  				"name": "nav2Endpoint",
+  				"resource": "leg"
+  			},
+  			{
+  				"type": "TriggerTask",
+  				"name": "TriggerTask",
+  				"timeout": 0,
+  				"resource": ""
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_smile",
+          "tts": "Thank you all, goodbye!",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/cesSayGoodbye",
+  				"resource": "head|arm|leg"
+  			},
+        {
+          "type": "TriggerTask",
+          "name": "TriggerTask",
+          "timeout": 0,
+          "resource": ""
+        },
+        {
+          "type": "ArmWalkTask",
+          "name": "walk/walkDynamic",
+          "enable": true,
+          "resource": "arm"
+        },
+        {
+          "type": "NavTask",
+          "name": "nav2GoBack",
+          "resource": "leg"
+        }
+  		]
+  	},
+
+
+    {
+      "groupname": "musicDebug",
+      "grouptype": "demo",
+      "subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.startmusic --es data /mnt/internal_sd/Music/01_Startshow.mp3",
+          "resource": ""
+        },
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 20000,
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.endmusic",
+          "resource": ""
+        },
+        {
+          "type": "DelayTask",
+          "name": "DelayTask",
+          "delay": 500,
+          "resource": ""
+        },
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_proud",
+          "tts": "Hello everyone, my name is walker. Good to meet you all.",
+          "resource": ""
+        }
+      ]
+    },
+
+
+    {
+      "groupname": "stopMusic",
+      "grouptype": "demo",
+      "subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "rawcmd": "adb shell am broadcast -a com.ubt.cruzr.walker.endmusic",
+          "resource": ""
+        }
+      ]
+    },
+
+  	{
+  		"groupname": "doGreeting",
+  		"grouptype": "demo",
+  		"subtask": [
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_proud",
+          "tts": "Hello everyone, I'm walker. Good to meet you all.",
+          "resource": ""
+        },
+  			{
+  				"type": "ArmTask",
+  				"name": "CES/cesGreetings",
+  				"resource": "head|arm|leg"
+  			},
+        {
+          "type": "HmiTask",
+          "name": "HmiTask",
+          "emotion": "face_default",
+          "tts": "",
+          "resource": ""
+        }
+  		]
+  	},
+
+
+    {
+      "groupname": "walkInHand",
+      "grouptype": "demo",
+      "subtask": [
+        {
+          "type": "ArmWalkTask",
+          "name": "walk/walkDynamicWithLeftHand",
+          "enable": true,
+          "resource": "arm"
+        }
+      ]
+    },
+
+
+  	{
+  		"groupname": "attention",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+          "type": "ArmWalkTask",
+          "name": "walk/walkDynamic",
+          "enable": true,
+          "resource": "arm"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "wholeBodyControl",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionWholeBodyControl",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "slaveLimbControl",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionSlaveLimbControl",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "nullSpaceControl",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionNullspaceControl",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "endpointControl",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionEndpointControl",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "avoidance",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionNullspaceControl",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "drawing",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "drawing/drawingWithForce",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "hybirdEffortControl",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionHybirdEffort",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+  	{
+  		"groupname": "hybirdPositionContr",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "ArmTask",
+  				"name": "function/functionHybirdPosition",
+  				"resource": "head|arm|leg"
+  			}
+  		]
+  	},
+
+    {
+      "groupname": "recharge",
+      "grouptype": "demo",
+      "subtask": [
+        {
+          "type": "ArmTask",
+          "name": "function/functionCharging",
+          "resource": "head|arm|leg"
+        }
+      ]
+    },
+
+    {
+      "groupname": "safeInteraction",
+      "grouptype": "demo",
+      "subtask": [
+        {
+          "type": "ArmTask",
+          "name": "function/functionSafetyPourWater",
+          "resource": "head|arm|leg"
+        }
+      ]
+    },
+
+  	{
+  		"groupname": "cesTask10",
+  		"grouptype": "demo",
+  		"subtask": [
+  			{
+  				"type": "NavTask",
+  				"name": "doFastwalk",
+  				"resource": "leg"
+  			}
+  		]
+  	}
+
+  ]
+}

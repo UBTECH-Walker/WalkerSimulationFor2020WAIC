@@ -1,0 +1,7 @@
+<launch>
+<param name="/use_sim_time" value="true" />
+<node pkg="example" type="example_node" name="example_node" respawn="false" respawn_delay="1" output="screen">
+
+</node>
+
+</launch>

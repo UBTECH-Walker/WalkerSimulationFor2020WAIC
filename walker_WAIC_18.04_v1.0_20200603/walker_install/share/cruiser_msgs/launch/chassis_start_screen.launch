@@ -1,0 +1,59 @@
+<launch>
+  <!--joint aciont file-->
+  <param name="actionFilePath" value="/home/cruiser/ros_ws/install/share/ros_arm_motion/actionlist" />
+  
+
+  <node pkg="rosserial_server" type="socket_node" name="rosserial_server" output="screen" respawn="true"/>
+  
+  <!--bringup cruiser-->
+  <node pkg="data_router" name="data_router_node" type="data_router_node" output="screen">
+           <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/chassis.yaml" command="load" />
+  </node>
+  <node pkg="chassis_node_1s" name="chassis_node_1s_odom" type="chassis_node_1s_odom" output="screen"/>
+
+  <node pkg="joint_device" name="joint_device_node" type="joint_device_node" output="screen" respawn="true">
+         <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/servo_60kg.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/chassis.yaml" command="load" />
+  </node>
+  <node pkg="hand_perssure_device" name="hand_perssure_device_node" type="hand_perssure_device_node" output="screen">
+           <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+           <rosparam file="$(find data_router)/config/sensor.yaml" command="load" />
+  </node>
+
+  <node pkg="power_device" name="power_device_node" type="power_device_node" output="screen">
+         <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/power.yaml" command="load" />
+</node>
+    <node pkg="sensor_device" name="sensor_device_node" type="sensor_device_node" output="screen">
+             <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+             <rosparam file="$(find data_router)/config/sensor.yaml" command="load" />
+    </node>
+
+<node pkg="geomagnetism_device" name="geomagnetism_device_node" type="geomagnetism_device_node" respawn="true">
+         <rosparam file="$(find data_router)/config/can_driver_config.yaml" command="load" />
+         <rosparam file="$(find data_router)/config/sensor.yaml" command="load" />
+</node>
+
+  <node pkg="navigation_behaviour" type="navigation_behaviour_node" name="navigation_behaviour_node" output="screen">
+  </node>
+  <node pkg="jointmotion_behaviour" type="jointmotion_behaviour_node" name="jointmotion_behaviour_node" output="screen"/>
+  <node pkg="led_behaviour" type="led_behaviour_node" name="led_behaviour_node" output="screen"/>
+  <node pkg="power_behaviour" type="power_behaviour_node" name="power_behaviour_node" output="screen"/>
+  <node pkg="charge_behaviour" type="charge_behaviour_node" name="charge_behaviour_node" output="screen"/>
+  <node pkg="locomotion_behaviour" type="locomotion_behaviour_node" name="locomotion_behaviour_node" output="screen">
+  </node>
+  
+  <node pkg="ros_sdk_interface" type="ros_sdk_interface_node" name="ros_sdk_interface_node" output="screen" respawn="true"/>
+  <node pkg="ros_arm_motion" type="armMotion_server_node" name="armMotion_server_node" output="screen" respawn="true">
+    <param name="joint_result_rate" value="10"/>
+  </node>
+  <node pkg="rgbd_addon" type="rgbd_ultrasound" name="rgbd_ultrasound" output="screen"/>
+  <node pkg="ros_diagnostic" type="ros_diagnostic_node" name="ros_diagnostic_node" output="screen"/>
+  <node pkg="rgbd_addon" type="motion_detect" name="motion_detect" output="screen"/>
+
+	<include file="$(find cruiser_bringup)/launch/cruiser_model_sensor.launch"/>
+	<include file="$(find gs_op_node)/launch/console.launch"/>
+</launch>

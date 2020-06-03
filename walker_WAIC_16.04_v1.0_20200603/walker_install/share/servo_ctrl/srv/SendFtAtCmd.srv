@@ -1,0 +1,7 @@
+# Ft ID(case insensitive): lwrist,rwrist,lankle,rankle
+string ft_id
+string at_cmd
+---
+bool success
+string at_res
+string message

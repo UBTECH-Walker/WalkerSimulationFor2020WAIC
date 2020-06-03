@@ -1,0 +1,52 @@
+version: 0.0.1
+sensor.totalSwitch: 
+    count: 1
+    moveAll: on
+sensor.groundIR: 
+    count: 6
+    1: on
+    2: on
+    3: on
+    4: off
+    5: off
+    6: off
+sensor.wallIR: 
+    count: 6
+    1: on
+    2: off
+    3: off
+    4: off
+    5: on
+    6: on
+sensor.ultrasonic: 
+    count: 6
+    1: on
+    2: on
+    3: on
+    4: on
+    5: on
+    6: on
+sensor.rgbd: 
+    count: 1
+    1: on
+sensor.lidar: 
+    count: 1
+    1: on
+sensor.pyroelectricity: 
+    count: 1
+    1: off  
+sensor.microwave: 
+    count: 1
+    1: off       
+sensor.eskin:
+    count: 8
+    l_palm: on
+    l_switch_palm: on
+    l_lowerarm_front: on
+    l_lowerarm_back: on
+    r_palm: on
+    r_switch_palm: on
+    r_lowerarm_front: on
+    r_lowerarm_back: on
+    
+    

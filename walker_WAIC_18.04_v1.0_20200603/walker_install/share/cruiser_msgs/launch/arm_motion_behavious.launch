@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="jointmotion_behaviour" type="jointmotion_behaviour_node" name="jointmotion_behaviour_node" respawn="true" output="screen"/>
+  
+</launch>

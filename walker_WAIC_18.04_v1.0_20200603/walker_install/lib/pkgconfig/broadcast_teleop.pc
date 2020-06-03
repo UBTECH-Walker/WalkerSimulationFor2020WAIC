@@ -1,0 +1,8 @@
+prefix=/home/chunyu/walker2_motion_output/install
+
+Name: broadcast_teleop
+Description: Description of broadcast_teleop
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs std_msgs roscpp

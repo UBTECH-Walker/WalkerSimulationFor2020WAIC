@@ -1,0 +1,12 @@
+
+<launch>
+
+<node pkg="cruiser_teleop" type="cruiser_teleop_em_stop" name="cruiser_teleop_em_stop">
+  <param name="axis_emstop" value="14"/>
+  <param name="axis_rerun" value="12"/>
+  <param name="cmd_topic" value="/Cruiser_brake"/>
+</node>
+
+<node pkg="joy" type="joy_node" name="joystick"/>
+
+</launch>

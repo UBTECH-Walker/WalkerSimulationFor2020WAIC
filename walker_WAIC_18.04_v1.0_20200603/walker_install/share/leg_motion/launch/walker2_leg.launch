@@ -1,0 +1,100 @@
+<launch>
+<param name="/use_sim_time" value="true" />
+
+<arg name="account_file" default="user_account.json"/>
+
+<node pkg="perm_checker" type="perm_checker_node" name="perm_checker_node" output="screen" args="$(arg account_file)"/>
+
+<node pkg="leg_motion" type="leg_motion_node" name="leg_motion_node" respawn="false" respawn_delay="1" output="screen" required="true">
+    <!-- switch -->
+    <!-- motor api enable -->
+    <param name="motor_api_enable" type="bool" value="false"/>
+
+    <!-- body compliance enable -->
+    <param name="body_z_impedance_enable" type="bool" value="false"/>
+    <param name="body_y_compliance_enable" type="bool" value="true"/>
+    <param name="body_x_compliance_enable" type="bool" value="true"/>
+
+    <!-- waist_plan_enable -->
+    <param name="waist_plan_enable" type="bool" value="true"/>
+
+    <!-- IMU controller enable -->
+    <param name="roll_ctrl_enable" type="bool" value="false"/>
+    <param name="pitch_ctrl_enable" type="bool" value="false"/>
+
+    <!-- body compliance including impedance enable -->
+    <param name="body_comp_impedance_x_enable" type="bool" value="false"/>
+    <param name="body_comp_impedance_y_enable" type="bool" value="false"/>
+    <!-- zmp absolute enable -->
+    <param name="zmp_absolute_enable" type="bool" value="false"/>
+
+    <!-- iros stand on one leg balance enable -->
+    <param name="iros_stand_one_leg_enable" type="bool" value="false"/>
+
+    <!-- body x's compliance including impedance controller coefficients -->
+    <!--param name="body_comp_impedance_x_kp" type="double" value="0.0"/-->
+    <!--param name="body_comp_impedance_x_kv" type="double" value="10"/!-->
+    <!--param name="body_comp_impedance_x_kzmp" type="double" value="-8.0"/!-->
+
+    <!-- body x's compliance including impedance controller coefficients -->
+    <param name="body_comp_impedance_x_kp" type="double" value="0.0"/>
+    <param name="body_comp_impedance_x_kv" type="double" value="10"/>
+    <param name="body_comp_impedance_x_kzmp" type="double" value="-8.0"/>
+
+    <!-- body y's compliance including impedance controller coefficients -->
+    <param name="body_comp_impedance_y_kp" type="double" value="0.0"/>
+    <param name="body_comp_impedance_y_kv" type="double" value="10"/>
+    <param name="body_comp_impedance_y_kzmp" type="double" value="-8.0"/>
+
+    <!-- Jumping coefficients -->
+    <param name="jumping_T" type="double" value="0.35"/>
+    <param name="jumping_upK" type="double" value="0.4"/>
+    <param name="jumping_downK" type="double" value="0.4"/>
+    <param name="jumping_acc_up" type="double" value="17.0"/>
+    <param name="jumping_acc_down" type="double" value="9.6"/>
+
+    <!-- Jumping impedance coefficients -->
+    <param name="jumping_im_z_ctrl_kp" type="double" value="35.0"/>
+    <param name="jumping_im_z_ctrl_kv" type="double" value="9.0"/>
+    <param name="jumping_im_z_ctrl_kforce" type="double" value="0.005"/>
+
+    <!-- IMU controller coefficients 450 180 60 balance board used-->
+    <!-- IMU controller coefficients roll:200 200 60, pitch:300, 100, 60 slide used-->
+    <param name="imu_roll_kp" type="double" value="200.0"/>
+    <param name="imu_roll_kd" type="double" value="200.0"/>
+    <param name="imu_roll_kv" type="double" value="60.0"/>
+
+    <param name="imu_pitch_kp" type="double" value="300.0"/>
+    <param name="imu_pitch_kd" type="double" value="100.0"/>
+    <param name="imu_pitch_kv" type="double" value="80.0"/>
+
+    <!-- body x's compliance controller coefficients -->
+    <param name="body_comp_x_ctrl_kp" type="double" value="1.5"/>
+    <param name="body_comp_x_ctrl_kv" type="double" value="12.0"/>
+    <param name="body_comp_x_ctrl_kzmp" type="double" value="12.0"/>
+
+    <!-- body y's compliance controller coefficients -->
+    <param name="body_comp_y_ctrl_kp" type="double" value="1.5"/>
+    <param name="body_comp_y_ctrl_kv" type="double" value="12.0"/>
+    <param name="body_comp_y_ctrl_kzmp" type="double" value="12.0"/>
+    <!--kp 1.5, kd 10.0, kv 8.0, gait used-->
+    <!--kp 1.5, kd 12.0, kv 10.0 -->
+    <!--kp 1.5, kd 12.0, kv 14.0 gait, balance, slide and compliance used -->
+
+    <!-- body z's impedance controller coefficients -->
+    <!-- desired status -->
+    <param name="body_im_desired_z_force" type="double" value="770.0"/>
+    <param name="body_im_desired_z_pos" type="double" value="0.61"/>
+    <param name="body_im_desired_z_vel" type="double" value="0.0"/>
+
+    <!-- coefficients kp 1.0, kv 12, kf 0.005 used jumping-->
+    <param name="body_im_z_ctrl_kp" type="double" value="1.0"/>
+    <param name="body_im_z_ctrl_kv" type="double" value="12.0"/>
+    <param name="body_im_z_ctrl_kforce" type="double" value="0.005"/>
+
+    <!-- Not used yet -->
+    <param name="arm_enable" type="bool" value="true"/>
+    <param name="leg_enable" type="bool" value="true"/>
+</node>
+
+</launch>

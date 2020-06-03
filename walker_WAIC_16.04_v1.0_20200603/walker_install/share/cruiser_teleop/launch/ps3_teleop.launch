@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="cruiser_teleop" type="cruiser_teleop_joy" name="cruiser_teleop_ps3">
+    <param name="scale_angular" value="1.0"/>
+    <param name="scale_linear" value="0.5"/>
+    <param name="axis_deadman" value="10"/>
+    <param name="axis_linear" value="1"/>
+    <param name="axis_angular" value="0"/>
+    <param name="cmd_topic" value="/cmd_vel"/>
+  </node>
+
+  <node pkg="joy" type="joy_node" name="joystick"/>
+
+</launch>

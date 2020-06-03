@@ -1,0 +1,10 @@
+<launch>
+
+  <param name="slamwareIP" value="192.168.11.1" />
+  <!--param name="mapfileConfig" value="/home/ubt/Downloads/map/2.26-3.stcm" /-->
+  <param name="slamwareSpeed" value="1" />
+  <param name="slamwareLiDa" value="yes" />
+
+  <node pkg="tf" type="static_transform_publisher" name="slamware_LiDa_scan" args="0 0.1 0.3 0 0 0 1 base_link laser_frame 100" />
+  <node pkg="navigation_behaviour" type="navigation_behaviour_node" name="navigation_behaviour_node" output="screen"/>
+</launch>

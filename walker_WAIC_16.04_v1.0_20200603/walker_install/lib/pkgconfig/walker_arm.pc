@@ -1,0 +1,8 @@
+prefix=/home/cjl/core_ws/walker_ws/walker2_motion_output/install
+
+Name: walker_arm
+Description: Description of walker_arm
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lwalker_arm
+Requires: std_msgs roscpp tf geometry_msgs

@@ -1,0 +1,6 @@
+uint32 ultrasound_freq
+uint32 wall_ir_freq
+uint32 charge_ir_freq
+---
+uint32 result
+

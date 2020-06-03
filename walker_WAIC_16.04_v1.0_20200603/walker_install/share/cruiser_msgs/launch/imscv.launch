@@ -1,0 +1,9 @@
+<launch>
+
+  <param name="imscvConnectMode" value="1" />
+  <param name="imscvPARAM1" value="/dev/ttyACM0" />
+  <param name="imscvPARAM2" value="115200" />
+
+  <node pkg="ros_sdk_interface" type="ros_sdk_interface_node" name="ros_sdk_interface_node" output="screen" respawn="true"/>
+  <node pkg="imscv_navigation" type="imscv_navigation_node" name="imscv_navigation_node" output="screen"/>
+</launch>

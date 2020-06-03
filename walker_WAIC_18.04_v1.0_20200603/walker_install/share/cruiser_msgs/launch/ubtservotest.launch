@@ -1,0 +1,3 @@
+<launch>
+  <node name="ubtServoTest" pkg="ubtservotest" type="ubtservotest_node" output="screen"/>
+</launch>

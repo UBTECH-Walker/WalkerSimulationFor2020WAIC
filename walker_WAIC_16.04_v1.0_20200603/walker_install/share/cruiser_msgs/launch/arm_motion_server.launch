@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="ros_arm_motion" type="armMotion_server_node" name="armMotion_server_node"   respawn="true" output="screen">
+    <param name="joint_result_rate" value="10"/>
+  </node>
+
+</launch>

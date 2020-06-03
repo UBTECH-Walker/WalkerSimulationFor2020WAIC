@@ -1,0 +1,47 @@
+---
+  #####################################################
+  #                     can servos                    #
+  #####################################################
+canservo_list:
+  - {id: 51, name: HeadYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 52, name: HeadPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 21, name: LShoulderPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 23, name: LShoulderRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 25, name: LShoulderYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 27, name: LElbowRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 29, name: LWristYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 31, name: LWristPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 33, name: LWristRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 63, name: LFingerThumb, period: 5, minpos: -170, maxpos: -17, gohome: false}
+  - {id: 65, name: LFingerIndex, period: 5, minpos: -170, maxpos: 39, gohome: false}
+  - {id: 67, name: LFingerMiddle, period: 5, minpos: -130, maxpos: 39, gohome: false}
+  - {id: 69, name: LFingerLittle, period: 5, minpos: -170, maxpos: 45, gohome: false}
+  - {id: 22, name: RShoulderPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 24, name: RShoulderRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 26, name: RShoulderYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 28, name: RElbowRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 30, name: RWristYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 32, name: RWristPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 34, name: RWristRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 64, name: RFingerThumb, period: 5, minpos: -170, maxpos: -17, gohome: false}
+  - {id: 66, name: RFingerIndex, period: 5, minpos: -170, maxpos: 39, gohome: false}
+  - {id: 68, name: RFingerMiddle, period: 5, minpos: -130, maxpos: 39, gohome: false}
+  - {id: 70, name: RFingerLittle, period: 5, minpos: -170, maxpos: 45, gohome: false}
+
+  #####################################################
+  #                     ecat servos                   #
+  #####################################################
+ecatservo_list:
+  - {id: 1002, name: LHipYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1003, name: LHipRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1004, name: LHipPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1005, name: LKneePitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1006, name: LAnklePitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1007, name: LAnkleRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1008, name: RHipYaw, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1009, name: RHipRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1010, name: RHipPitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1011, name: RKneePitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1012, name: RAnklePitch, period: 10, minpos: -179, maxpos: 179, gohome: true}
+  - {id: 1013, name: RAnkleRoll, period: 10, minpos: -179, maxpos: 179, gohome: true}
+

@@ -1,0 +1,9 @@
+<launch>
+
+<param name="/broadcast_teleop/broadcast_port" type="int" value="7707"/>
+<param name="/broadcast_teleop/feedback_port" type="int" value="7708"/>
+<node pkg="broadcast_teleop" type="receiver_node" name="broadcast_receiver" respawn="true" respawn_delay="1" output="screen">
+
+</node>
+
+</launch>

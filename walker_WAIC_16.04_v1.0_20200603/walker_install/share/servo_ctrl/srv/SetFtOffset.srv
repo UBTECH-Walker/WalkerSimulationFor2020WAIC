@@ -1,0 +1,10 @@
+# ftId: "lwrist", "rwrist", "lankle", "rankle"
+string ftId
+int32  fx
+int32  fy
+int32  fz
+int32  mx
+int32  my
+int32  mz
+---
+string result

@@ -1,0 +1,27 @@
+			读取、设置X86登录密码的方法：
+			
+准备工作：
+   1）对于Cruzr1代如下准备：
+	1、将win_passwd_client.exe文件拷贝到Window某目录下；
+	2、将文件robot_ip.txt中的IP（）修改为192.168.100.10
+	3、用网线连接个人电脑有线网口和机器人X86 居中的网口（IP为192.168.100.10）；
+	4、将个人电脑上对应网口IP修改为192.168.100.15 (或192.168.100.xxx)；
+
+   2）对于Cruzr1S如下准备：
+	1、将win_passwd_client.exe文件拷贝到Window某目录下；
+	2、将文件robot_ip.txt中的IP（）修改为192.168.11.123
+	3、用网线连接个人电脑有线网口和机器人X86 对应的网口（IP为192.168.11.123，需要使用HDMI转网口线转接）；
+	4、将个人电脑上对应网口IP修改为192.168.11.15 (或192.168.11.xxx)；
+
+	
+常用操作方法：（x86开机完成的前5分钟内，下面操作有效；）
+	1、读取X86的登录密码：		直接在Windows上鼠标点击文件：win_passwd_client.exe
+	2、根据网卡设置登录密码：	Windows上打开命令行，进入到win_passwd_client.exe文件所在的路径，输入如下命令：win_passwd_client.exe  reset
+	
+	
+	
+预留命令（不推荐使用）：
+	win_passwd_client.exe  fix_key		--->将登录密码设置为ubt123 （不推荐）
+	win_passwd_client.exe  old_key_aa	--->将登录密码设置为aa,该命令仅仅允许过渡使用一段时间，后续将会取消该命令
+	
+	

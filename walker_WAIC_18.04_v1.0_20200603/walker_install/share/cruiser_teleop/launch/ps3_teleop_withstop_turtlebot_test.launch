@@ -1,0 +1,22 @@
+<launch>
+    
+  <include file="$(find cruiser_teleop)/launch/includes/velocity_smoother.launch.xml">
+      <arg name="smooth_cmd_vel_topic"          value="/cmd_vel"/>
+  </include>
+  <node pkg="cruiser_teleop" type="cruiser_teleop_joy_emstop" name="cruiser_teleop_joy_emstop">
+    <param name="scale_angular" value="1.0"/>
+    <param name="scale_linear" value="0.5"/>
+    <param name="axis_deadman" value="10"/>
+    <param name="axis_linear" value="1"/>
+    <param name="axis_angular" value="0"/>
+    <param name="cmd_topic" value="/cmd_vel_raw"/>
+    <param name="axis_emstop" value="14"/>
+    <param name="axis_rerun" value="12"/>
+    <param name="brake_topic" value="/Cruiser_brake"/>
+    <remap from="/cmd_vel_raw" to="teleop_velocity_smoother/raw_cmd_vel"/>
+  </node>
+
+  <node pkg="joy" type="joy_node" name="joystick"/>
+
+
+</launch>

@@ -1,0 +1,8 @@
+uint32 type
+uint32 data0
+uint32 data1
+uint32 data2
+uint32 max_times
+---
+uint32 result
+

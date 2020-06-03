@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="cruiser_navigation" type="rgbd_ultrasound" name="rgbd_ultrasound" output="screen"/>
+  <node pkg="cruiser_navigation" type="rgbd_detect" name="rgbd_detect" output="screen"/>
+</launch>

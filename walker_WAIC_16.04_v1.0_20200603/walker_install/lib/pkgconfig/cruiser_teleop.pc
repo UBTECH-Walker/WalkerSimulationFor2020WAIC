@@ -1,0 +1,8 @@
+prefix=/home/cjl/core_ws/walker_ws/walker2_motion_output/install
+
+Name: cruiser_teleop
+Description: Description of cruiser_teleop
+Version: 1.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/chunyu/walker2_motion_output/install
+
+Name: servo_client
+Description: Description of servo_client
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

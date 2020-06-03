@@ -1,0 +1,13 @@
+<launch>
+
+  <param name="ODOM_rate" value="100"/>
+
+  <!--bringup cruiser-->
+  <!--node pkg="cruiser_controller" type="ros_cruiser_server.py" name="bringup_cruiser" output="screen"/-->
+  <node pkg="data_router" type="data_router_node" name="data_router_node" output="screen"/>
+  <node pkg="chassis_device" type="chassis_device_node" name="chassis_device_node" output="screen"/>
+  <node pkg="navigation_behaviour" type="navigation_behaviour_node" name="navigation_behaviour_node" output="screen"/>
+  <node pkg="jointmotion_behaviour" type="jointmotion_behaviour_node" name="jointmotion_behaviour_node" output="screen"/>
+  <node pkg="ros_sdk_interface" type="ros_sdk_interface_node" name="ros_sdk_interface_node" output="screen"/>
+  <node pkg="ros_arm_navigation" type="ros_motion_proxy.py" name="ros_motion_proxy" output="screen"/>
+</launch>

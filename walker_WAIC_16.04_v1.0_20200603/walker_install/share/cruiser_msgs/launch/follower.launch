@@ -1,0 +1,55 @@
+<launch>
+  <param name="/use_sim_time" value="false" />
+  <param name="/odom_frame" value="odom" />
+  <param name="/base_frame" value="base_footprint" />
+  <param name="/publish_tf" value="true" />
+
+  <!-- square parameter-->
+  <param name="~goal_distance" value="2.0"/>
+  <param name="/publish_rate" value="20"/>
+  <param name="~linear_speed" value="0.4"/>
+  <param name="~angular_speed" value="0.6"/>
+  <param name="~angular_tolerance" value="0.05"/>
+  <!-- include files-->
+  <!--include file="$(find cruiser_bringup)/launch/view_cruiser.launch"/-->
+
+
+  <node pkg="cruiser_navigation" type="stamped_vel_assign" name="stamped_vel_assign" output="screen"/>
+  <node pkg="cruiser_navigation" type="cruiser_odommetry" name="cruiser_odommetry" output="screen"/>
+
+  <!-- follower-->
+  <arg name="simulation" default="false"/>
+  <group unless="$(arg simulation)"> <!-- Real robot -->
+    <!--include file="$(find cruiser_navigation)/launch/includes/velocity_smoother.launch.xml"/-->
+
+
+    <param name="camera/rgb/image_color/compressed/jpeg_quality" value="22"/>
+
+    <include file="$(find openni2_launch)/launch/openni2.launch"/>
+
+
+    <!-- Make a slower camera feed available; only required if we use android client -->
+    <node pkg="topic_tools" type="throttle" name="camera_throttle"
+          args="messages camera/rgb/image_color/compressed 5"/>
+
+  <!--  Load turtlebot follower into the 3d sensors nodelet manager to avoid pointcloud serializing -->
+    <node pkg="nodelet" type="nodelet" name="turtlebot_follower"
+          args="load turtlebot_follower/TurtlebotFollower camera/camera_nodelet_manager">
+      <remap from="turtlebot_follower/cmd_vel" to="/cmd_vel"/>
+      <remap from="depth/points" to="camera/depth/points"/>
+      <param name="enabled" value="true" />
+      <param name="x_scale" value="7.0" />
+      <param name="z_scale" value="1.0" />
+      <param name="min_x" value="-0.35" />
+      <param name="max_x" value="0.35" />
+      <param name="min_y" value="0.1" />
+      <param name="max_y" value="0.5" />
+      <param name="max_z" value="1.2" />
+      <param name="goal_z" value="0.6" />
+    </node>
+  </group>
+  <group if="$(arg simulation)">
+    <!-- not supported.. -->
+  </group>
+
+</launch>

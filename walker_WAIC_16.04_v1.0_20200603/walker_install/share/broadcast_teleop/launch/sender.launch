@@ -1,0 +1,10 @@
+<launch>
+    <arg name="my_args" default=""/>
+    <param name="/broadcast_teleop/broadcast_port" type="int" value="7707"/>
+    <param name="/broadcast_teleop/feedback_port" type="int" value="7708"/>
+    <node pkg="broadcast_teleop" type="sender_node" name="broadcast_sender" args="$(arg my_args)" output="screen">
+        <param name="pending_ms" type="int" value="3000"/>
+        <rosparam param="broadcast_addresses"> ["192.168.3.255"]</rosparam>
+    </node>
+
+</launch>

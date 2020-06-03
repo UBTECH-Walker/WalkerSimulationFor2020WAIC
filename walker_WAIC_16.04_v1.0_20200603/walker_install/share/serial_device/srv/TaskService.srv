@@ -1,0 +1,11 @@
+string taskName
+bool taskEnable
+bool[] useJointOTG
+bool[] useCartOTG
+bool[] securityDection
+bool[] collisionDetection
+
+---
+
+bool result
+string message

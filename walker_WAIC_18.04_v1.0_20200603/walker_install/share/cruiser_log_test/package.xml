@@ -1,0 +1,30 @@
+
+<package>
+  <name>cruiser_log_test</name>
+  <version>1.10.13</version>
+  <description>The pr2_mechanism_controllers package contains realtime
+    controllers that are meant for specific mechanisms of the PR2.</description>
+  <maintainer email="dash@clearpathrobotics.com">Devon Ash</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/pr2_mechanism_controllers</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <author>Sachin Chita</author>
+  <author>John Hsu</author>
+  <author>Melonee Wise</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>cruiser_log</build_depend>  <!-- add this in your package -->
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+
+  <run_depend>cruiser_log</run_depend>  <!-- add this in your package -->
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>rosparam</run_depend>
+  <run_depend>pluginlib</run_depend>
+</package>

@@ -1,0 +1,9 @@
+# adb commands to send
+string adb_cmd
+---
+# indicate status
+bool success
+
+# informational, e.g. for error messages
+string message
+

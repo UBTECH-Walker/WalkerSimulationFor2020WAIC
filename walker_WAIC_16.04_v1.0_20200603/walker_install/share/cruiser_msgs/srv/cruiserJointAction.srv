@@ -1,0 +1,13 @@
+# This file defines a command inferring to a action to play
+
+# Action name in ASCII
+string action_name
+
+# Times action will be played
+# 0 means infinite loop
+int16 action_time
+
+---
+# Return "Success" or "Fail"
+string result
+

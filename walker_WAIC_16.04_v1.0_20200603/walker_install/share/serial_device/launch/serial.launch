@@ -1,0 +1,18 @@
+
+<launch>
+
+<node pkg="serial_device" type="walker433_node" name="walker433_node" respawn="true" respawn_delay="1" output="screen">
+    <param name="serial_port_433" type="string" value="/dev/ttyS2"/>
+    <param name="enable_433_remoter" type="bool" value="false"/>
+    <param name="dance_cctv" type="bool" value="true"/>
+    <param name="music_on" type="bool" value="false"/>
+    <param name="arm_task_id" type="string" value="cctv/CCTVAction"/>
+    <param name="leg_task_id" type="string" value="nav2Center"/>
+    <param name="tts_language" type="string" value="cn"/>
+
+    <!-- Not used yet -->
+    <param name="arm_enable" type="bool" value="true"/>
+    <param name="leg_enable" type="bool" value="true"/>
+</node>
+
+</launch>
