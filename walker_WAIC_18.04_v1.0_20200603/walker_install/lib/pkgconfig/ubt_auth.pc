@@ -1,8 +1,0 @@
-prefix=/home/chunyu/walker2_motion_output/install
-
-Name: ubt_auth
-Description: Description of ubt_auth
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lubt_auth
-Requires: roscpp perm_checker

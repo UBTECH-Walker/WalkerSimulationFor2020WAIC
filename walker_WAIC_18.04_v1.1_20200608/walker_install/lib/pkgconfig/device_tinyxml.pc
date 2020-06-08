@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/WalkerSimulation/walker2_motion_output/install
+
+Name: device_tinyxml
+Description: Description of device_tinyxml
+Version: 1.8.16
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ldevice_tinyxml
+Requires: roscpp pluginlib

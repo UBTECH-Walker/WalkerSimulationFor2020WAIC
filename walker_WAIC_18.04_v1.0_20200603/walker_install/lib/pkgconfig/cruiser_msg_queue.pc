@@ -1,8 +1,0 @@
-prefix=/home/chunyu/walker2_motion_output/install
-
-Name: cruiser_msg_queue
-Description: Description of cruiser_msg_queue
-Version: 1.8.16
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lcruiser_msg_queue
-Requires: roscpp pluginlib

@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/WalkerSimulation/walker2_motion_output/install
+
+Name: astra_launch
+Description: Description of astra_launch
+Version: 0.2.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
