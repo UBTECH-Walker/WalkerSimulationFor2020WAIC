@@ -1,8 +1,0 @@
-prefix=/home/chunyu/Simulation/WalkerForCompetition/WalkerSimulation/walker2_motion_output/install
-
-Name: ubt_core_msgs
-Description: Description of ubt_core_msgs
-Version: 1.2.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime geometry_msgs sensor_msgs std_msgs

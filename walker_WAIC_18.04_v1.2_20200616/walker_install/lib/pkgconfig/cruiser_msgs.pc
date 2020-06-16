@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/walker2_motion_output/install
+
+Name: cruiser_msgs
+Description: Description of cruiser_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime

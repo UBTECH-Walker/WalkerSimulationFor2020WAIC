@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/walker2_motion_output/install
+
+Name: serial_device
+Description: Description of serial_device
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs std_srvs roscpp tf geometry_msgs cruiser_msgs servo_ctrl

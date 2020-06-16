@@ -1,8 +1,0 @@
-prefix=/home/chunyu/Simulation/WalkerForCompetition/WalkerSimulation/walker2_motion_output/install
-
-Name: basic_device
-Description: Description of basic_device
-Version: 1.8.16
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lbasic_device
-Requires: roscpp pluginlib

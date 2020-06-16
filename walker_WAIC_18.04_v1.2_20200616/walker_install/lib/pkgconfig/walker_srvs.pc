@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/walker2_motion_output/install
+
+Name: walker_srvs
+Description: Description of walker_srvs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

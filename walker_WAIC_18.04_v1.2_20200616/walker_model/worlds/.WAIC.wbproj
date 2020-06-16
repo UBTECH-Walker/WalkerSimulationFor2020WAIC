@@ -1,0 +1,19 @@
+Webots Project File version R2020a
+perspectives: 000000ff00000000fd00000003000000000000000000000000fc0100000001fb0000001a0044006f00630075006d0065006e0074006100740069006f006e0000000000ffffffff0000005400ffffff00000001000000c700000343fc0200000001fb0000001400540065007800740045006400690074006f00720000000016000003430000003c00ffffff00000003000007800000008cfc0100000001fb0000000e0043006f006e0073006f006c00650100000000000007800000005400ffffff000007800000035e00000001000000020000000100000008fc00000000
+simulationViewPerspectives: 000000ff00000001000000020000011d000005330100000006010000000100
+sceneTreePerspectives: 000000ff0000000100000002000000c0000001a50100000006010000000200
+maximizedDockId: -1
+centralWidgetVisible: 1
+selectionDisabled: 0
+viewpointLocked: 0
+orthographicViewHeight: 1
+textFiles: -1
+globalOptionalRendering: CoordinateSystem
+renderingDevicePerspectives: Walker2:Top_RGB;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Bottom_RGB;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Head_Depth;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Right_Eye;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Top_Depth;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Bottom_Depth;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Left_Eye;1;1.54531;0;0
+renderingDevicePerspectives: Walker2:Head_RGB;1;1.54531;0;0

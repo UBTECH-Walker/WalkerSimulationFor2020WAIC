@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/walker2_motion_output/install
+
+Name: walker_msgs
+Description: Description of walker_msgs
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs diagnostic_msgs geometry_msgs map_msgs nav_msgs sensor_msgs shape_msgs std_msgs stereo_msgs trajectory_msgs visualization_msgs

@@ -1,0 +1,8 @@
+prefix=/home/chunyu/Simulation/WalkerForCompetition/walker2_motion_output/install
+
+Name: cruiser_log_debug
+Description: Description of cruiser_log_debug
+Version: 1.10.13
+Cflags: 
+Libs: -L${prefix}/lib -lcruiser_log_debug
+Requires: roscpp pluginlib
